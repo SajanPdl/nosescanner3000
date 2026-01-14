@@ -75,5 +75,5 @@ This application is purely cosmetic and for entertainment purposes.
 ---
 
 <p align="center">
-  <i>Made with ❤️ for the 9th Expo. Please boop responsibly.</i>
+  <i>Made with ❤️ with fun and curiosity. Please boop responsibly.</i>
 </p>

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="banner.png" alt="Nose Scanner 3000 Banner" width="100%">
+  <img src="assets/img/banner.png" alt="Nose Scanner 3000 Banner" width="100%">
 </p>
 
 # Nose Scanner 3000 — Elite Boop Protocol 👃✨

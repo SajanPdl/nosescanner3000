@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nose Scanner 3000 — Boop to Verify!</title>
+    <meta name="description" content="A playful, silly nose scanner demo. No biometric data is stored or uploaded.">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts: Inter and Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Face Detection Library -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.11.0/dist/tf.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@vladmandic/face-api@1.7.12/dist/face-api.min.js"></script>
+</head>
+
+<body>
+    <main class="app-container">
+        <header class="hero">
+            <h1 class="title">Nose Scanner 3000</h1>
+            <p class="subtitle">Boop to Verify! A silly, safe demo. No data leaves your device.</p>
+        </header>
+
+        <section class="scanner-card" role="region" aria-label="Nose Scanner Console">
+            <div class="scanner-view" id="scannerView">
+                <div class="scanner-target" id="scannerTarget">
+                    <div class="nose-placeholder">
+                        <svg class="nose-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2C9.5 2 7 4 7 7v7c0 2 1.5 3 5 3s5-1 5-3V7c0-3-2.5-5-5-5z" />
+                            <path d="M7 14c-1.5 0-3 1-3 3s1.5 3 3 3 3-1 3-3" />
+                            <path d="M17 14c1.5 0 3 1 3 3s-1.5 3-3 3-3-1-3-3" />
+                        </svg>
+                        <span>Place your nose here</span>
+                    </div>
+                    <video id="webcamPreview" autoplay playsinline muted hidden aria-label="Webcam Preview"></video>
+                    <canvas id="detectionCanvas" hidden></canvas>
+
+                    <!-- Scanning Overlay -->
+                    <div class="scan-overlay" id="scanOverlay">
+                        <div class="scan-beam"></div>
+                        <div class="scan-grid"></div>
+                        <div class="scan-pulse"></div>
+                    </div>
+                </div>
+
+                <div class="status-container">
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" id="progressBar"></div>
+                    </div>
+                    <p class="status-text" id="statusText">Ready for booping...</p>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="scanBtn" class="btn btn-primary" aria-label="Start Nose Scan">
+                    Scan Nose
+                </button>
+                <button id="webcamBtn" class="btn btn-secondary" aria-label="Enable Webcam">
+                    Use Webcam (Local only)
+                </button>
+            </div>
+
+            <div class="audio-toggle">
+                <label class="switch">
+                    <input type="checkbox" id="soundToggle" checked>
+                    <span class="slider round"></span>
+                </label>
+                <span>Sound Effects (On)</span>
+            </div>
+        </section>
+
+        <!-- Result Modal (Hidden by default) -->
+        <div id="resultModal" class="modal" aria-hidden="true">
+            <div class="modal-content">
+                <div id="modalIcon" class="modal-icon"></div>
+                <h2 id="modalTitle">Verification Status</h2>
+
+                <!-- Nose Score -->
+                <div class="nose-score">
+                    <div class="score-label">Nose Rating</div>
+                    <div class="score-value" id="noseScore">0.0</div>
+                    <div class="score-max">/ 10</div>
+                </div>
+
+                <!-- Nose Type -->
+                <div class="nose-type" id="noseType">
+                    <span class="type-emoji">🧠</span>
+                    <div class="type-info">
+                        <div class="type-name">Thinker Nose</div>
+                        <div class="type-desc">Deep thoughts detected</div>
+                    </div>
+                </div>
+
+                <p id="modalJoke" class="joke-text"></p>
+
+                <div class="modal-actions">
+                    <button id="shareBtn" class="btn btn-secondary">Share Result 😂</button>
+                    <button id="closeModal" class="btn btn-primary">Try Again</button>
+                </div>
+            </div>
+        </div>
+
+        <footer class="notice">
+            <p><strong>Privacy & Ethics Note:</strong> This demo is purely cosmetic. All processing is client-side. No
+                images are uploaded or stored.</p>
+        </footer>
+    </main>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

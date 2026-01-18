@@ -6,7 +6,7 @@
 // Configuration
 const CONFIG = {
     scanDuration: 5000, // 5 seconds
-    successProbability: 0.7,
+    successProbability: 0.1,
         legendary: [
             "🏆 LEGENDARY NOSE FOUND! (0.7% chance)",
             "This nose unlocked secret DLC content.",

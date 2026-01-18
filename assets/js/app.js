@@ -27,7 +27,7 @@ const CONFIG = {
     ],
     jokes: {
        
-        fail: [
+        sucess: [
             "Scan failed. Nose moved due to excitement.",
             "Error 404: Nose stayed mysterious.",
             "Too much swag detected. Scanner overloaded.",

@@ -42,6 +42,21 @@ const CONFIG = {
             "Nose not found. Did you forget it at home today?",
             "Too much boop-ability detected. System crashed for safety."
         ],
+          fail: [
+            "Scan failed. Nose moved due to excitement.",
+            "Error 404: Nose stayed mysterious.",
+            "Too much swag detected. Scanner overloaded.",
+            "We blinked. Your nose didn't. Try again.",
+            "Scan aborted. Nose escaped detection.",
+            "This nose wins arguments silently.",
+            "Built for deep thoughts and deeper sniffs.",
+            "This nose enters a room before you do.",
+            "Nose too humble for our sensors. Please be more arrogant.",
+            "Are you even human? This nose suggests 'God-tier Entity'.",
+            "Scanner confused by the sheer majesty of this scent-sniffer.",
+            "Nose not found. Did you forget it at home today?",
+            "Too much boop-ability detected. System crashed for safety."
+        ],
         legendary: [
             "🏆 LEGENDARY NOSE FOUND! (0.7% chance)",
             "This nose unlocked secret DLC content.",

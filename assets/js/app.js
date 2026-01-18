@@ -26,22 +26,7 @@ const CONFIG = {
         "Detecting hidden boop potential..."
     ],
     jokes: {
-        success: [
-            "Scan complete. This nose has elite boop energy. 👃✨",
-            "Verified! Your nose passed with flying sniff-marks.",
-            "Nose detected. Confidence level: dangerously high 😌",
-            "Certified honk-ready. Please proceed responsibly.",
-            "This nose could smell drama from 3 rooms away.",
-            "Analyzing… nostril symmetry detected (mostly).",
-            "Interesting… this nose has main-character vibes.",
-            "Sniff patterns are… unique. Respect. 🫡",
-            "This nose has seen things. Still standing strong.",
-            "Wait... is this a nose or a work of art? 🎨",
-            "Your nose just qualified for the Sniffing Olympics. 🏅",
-            "This nose has a very high IQ. I can tell.",
-            "If noses were currency, you'd be a billionaire. 💸",
-            "Perfect aerodynamic profile. Very fast sniffs possible."
-        ],
+       
         fail: [
             "Scan failed. Nose moved due to excitement.",
             "Error 404: Nose stayed mysterious.",
